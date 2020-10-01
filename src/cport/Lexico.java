@@ -17,7 +17,7 @@ class Lexico {
         // procurar expressão dicionario que valide o token
         // se houver erro enviar mensagem
 
-        Arquivo arq_dic = new Arquivo("expressoes.txt");
+        Arquivo arq_dic = new Arquivo("expressoes");
         this.dicionario = arq_dic.LerConteudo();
 
         Arquivo arq_fonte = new Arquivo(nome);

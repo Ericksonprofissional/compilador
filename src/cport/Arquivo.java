@@ -16,13 +16,15 @@ public class Arquivo {
     public String diretorio;
     
     public Arquivo(String nome) {
-        this.diretorio = "C:\\Linguagem\\";
+        this.diretorio = "C:\\Linguagens\\";
+        ///home/before/EricksonSouzaMartinez
         this.nomeArquivo = nome;
     }
     
     public List<String>LerConteudo() throws FileNotFoundException, IOException {
         List<String> conteudo = new ArrayList();
-        String nomeCompleto = this.diretorio + this.nomeArquivo;
+        String nomeCompleto = this.diretorio + this.nomeArquivo + ".txt";
+        //System.out.println(nomeCompleto);
         FileReader arq = new FileReader(nomeCompleto);
         BufferedReader buffer = new BufferedReader(arq);
 
