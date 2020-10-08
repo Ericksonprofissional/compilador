@@ -17,11 +17,11 @@ public class Sintatico {
     public List<String> codigoFonte;
     public List<String> gramatica;
 
-    public void analisadorSintatico(String nome) throws IOException {
-        Arquivo arq_gramatica = new Arquivo("gramatica_exp");
+    public void analisadorSintatico(String caminho, String nome) throws IOException {
+        Arquivo arq_gramatica = new Arquivo(caminho,"gramatica_exp");
         this.gramatica = arq_gramatica.LerConteudo();
 
-        Arquivo arq_fonte = new Arquivo(nome);
+        Arquivo arq_fonte = new Arquivo(caminho, nome);
         this.codigoFonte = arq_fonte.LerConteudo();
 
         Boolean correto = false;

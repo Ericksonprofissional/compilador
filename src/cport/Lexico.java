@@ -10,17 +10,17 @@ class Lexico {
     public List<String> codigoFonte;
     public List<String> tokens;
 
-    public void AnalisarLexito(String nome) throws IOException {
+    public void AnalisarLexito(String caminho, String nome) throws IOException {
         // ler arquivos
         //ler exempllo
         //separa exemplo por token
         // procurar expressão dicionario que valide o token
         // se houver erro enviar mensagem
 
-        Arquivo arq_dic = new Arquivo("expressoes");
+        Arquivo arq_dic = new Arquivo(caminho, "dicionario_exp");
         this.dicionario = arq_dic.LerConteudo();
 
-        Arquivo arq_fonte = new Arquivo(nome);
+        Arquivo arq_fonte = new Arquivo(caminho, nome);
         this.codigoFonte = arq_fonte.LerConteudo();
 
         this.tokens = separarTokens();

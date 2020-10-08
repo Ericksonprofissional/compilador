@@ -8,17 +8,20 @@ import java.util.Scanner;
 public class CPort {
     
     public static void main(String[] args) throws IOException {
-        
+                
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Digite o nome do Arquivo fonte");
+        System.out.println("Digite o caminho da pasta onde esta o arquivo:\n exemplo: \"C:\\\\Linguagens\\\\trabalho\\\\\"");
+        String pasta = teclado.nextLine();       
+        
+        System.out.println("Digite apenas nome do Arquivo fonte, sem extensão do arquivo");
         String nomeFonte = teclado.nextLine();
        
         Lexico scanner = new Lexico();
-        scanner.AnalisarLexito(nomeFonte);
+        scanner.AnalisarLexito(pasta ,nomeFonte);
         
         Sintatico sintatico = new Sintatico();
         System.out.println("Analisando sintaticamente");
-        sintatico.analisadorSintatico(nomeFonte);
+        sintatico.analisadorSintatico(pasta, nomeFonte);
         System.out.println("/fim da Analise sintatica");
 
     }

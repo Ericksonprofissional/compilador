@@ -18,11 +18,11 @@ class Semantico {
     
     
     public void analisadorSemantico(String nomeFonte) throws IOException {
-        Arquivo  arq_gramatica = new Arquivo("gramatica_exp");
-        this.gramatica = arq_gramatica.LerConteudo();
+       //Arquivo  arq_gramatica = new Arquivo(pasta, "gramatica_exp");
+       // this.gramatica = arq_gramatica.LerConteudo();
         
-        Arquivo  arq_fonte = new Arquivo(nomeFonte);
-        this.codigoFonte = arq_fonte.LerConteudo();
+       // Arquivo  arq_fonte = new Arquivo(pasta, nomeFonte);
+       //this.codigoFonte = arq_fonte.LerConteudo();
         
     }
 }
