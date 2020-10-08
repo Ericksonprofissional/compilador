@@ -15,8 +15,8 @@ public class Arquivo {
     public String nomeArquivo;
     public String diretorio;
     
-    public Arquivo(String nome) {
-        this.diretorio = "C:\\Linguagens\\";
+    public Arquivo(String caminho, String nome) {
+        this.diretorio = caminho;
         ///home/before/EricksonSouzaMartinez
         this.nomeArquivo = nome;
     }
